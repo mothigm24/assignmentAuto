@@ -1,0 +1,44 @@
+package day1;
+
+class Employee {
+    int empid;
+    String empname;
+    String empdep;
+    int empsal;
+
+    String doTask() {
+        return "Task Completed";
+    }
+
+    String assignTask(String empRole) {
+        if (empRole.equalsIgnoreCase("Manager")) {
+            return "Manage the team";
+        } else if (empRole.equalsIgnoreCase("Developer")) {
+            return "Develop the application";
+        } else if (empRole.equalsIgnoreCase("Tester")) {
+            return "Test the application";
+        } else {
+            return "General Office Work";
+        }
+    }
+}
+
+public class OOPSAssign {
+
+    public static void main(String[] args) {
+
+        Employee user = new Employee();
+
+        user.empid = 101;
+        user.empname = "Rahul";
+        user.empdep = "Information Technology";
+        user.empsal = 45000;
+
+        System.out.println("Employee ID: " + user.empid);
+        System.out.println("Employee Name: " + user.empname);
+        System.out.println("Employee Department: " + user.empdep);
+        System.out.println("Employee Salary: " + user.empsal);
+        System.out.println("Assigned Task: " + user.assignTask("Developer"));
+        System.out.println("Do Task: " + user.doTask());
+    }
+}

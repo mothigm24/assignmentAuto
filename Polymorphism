@@ -1,0 +1,26 @@
+package day1;
+
+class Employ {
+	
+	String Role(int salary) {
+		return "Salesman";
+	}
+	
+	int Role(String Designation) {
+		return 10000;
+	}
+
+	
+}
+
+public class PolymorAssign {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employ emp = new Employ();
+		System.out.println(emp.Role(10000));
+		System.out.println(emp.Role("Salesman"));
+		
+		
+
+	}
